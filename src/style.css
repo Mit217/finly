@@ -1,0 +1,21 @@
+.navbar{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 40px;
+    font-weight:2px;
+}
+.navbar a{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+.navbar div{
+    display: flex;
+    gap: 40px;
+    
+}
