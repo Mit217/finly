@@ -19,3 +19,98 @@
     gap: 40px;
     
 }
+.card{
+    background-color: white;
+  /* padding: 100px; */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* gap: 12px; */
+  width: 650px; 
+  height: 400px;  
+}
+
+.title-card{
+    background-color: white;
+    color: black;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-card h1{
+    font-size: 85px;
+    font-weight:bold;
+}
+
+.title-card p{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    font-size: medium;
+    font-style: italic;
+    font-weight: 550;
+}
+.login-card {
+  background-color: white;
+  padding-right: 8%;
+  padding: 90px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 12px;
+  width: 500px;
+}
+
+.login-card h1 {
+  color: black;
+  font-size: 25px;
+  margin: 0;
+}
+
+.login-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.login-card button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.switch {
+  text-align: center;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.switch:hover {
+  color: black;
+}
+
+.layout{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.layout h1{
+    font-size: 90px;
+}
+
+/* .layout p{
+    
+} */

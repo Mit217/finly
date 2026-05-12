@@ -128,17 +128,24 @@ import Transactions from "./pages/Transactions";
 import Budget from "./pages/Budget";
 import Analytics from "./pages/Analytics";
 import Navbar from "./components/Navbar";
+import V1 from "./pages/V1";
+import V2 from "./pages/V2";
+
 function App(){
   return (
     <BrowserRouter>
       <Navbar/>
-      <Routes>
+      <main className="main-container">
+        <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/transactions" element={<Transactions/>}/>
         <Route path="/budget" element={<Budget/>}/>
         <Route path="/analytics" element={<Analytics/>}/>
+        <Route path="/V1" element={<V1/>}/>
+        <Route path="/V2" element={<V2/>}/>
       </Routes>
-    </BrowserRouter>
+      </main>
+     </BrowserRouter> 
   );
 }
-export default App
+export default App;
