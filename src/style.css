@@ -231,6 +231,91 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.cat-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.cat-name {
+  width: 100px;
+  font-size: 14px;
+  margin: 0;
+  color: black;
+}
+
+.cat-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cat-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.cat-percent {
+  width: 36px;
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  text-align: right;
+}
+
+.cat-amount {
+  width: 70px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  text-align: right;
+}
+
+.chart-card {
+  background-color: #f5f5f5;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-top: 24px;
+}
+
+.chart-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+}
+
+.filters select, .filters input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #888;
+}
 
 .transactions {
   padding: 40px;
@@ -397,4 +482,16 @@
   height: 100%;
   border-radius: 6px;
   transition: width 0.3s ease;
+}
+
+.analytics {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.analytics h2 {
+  font-size: 28px;
+  margin: 0;
 }

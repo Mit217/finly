@@ -1,18 +1,23 @@
-import App from "../App.jsx"
+// import App from "../App.jsx"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style.css";
 
 function Login() {
+  const navigate=useNavigate();
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [savedPassword, setSavedPassword] = useState("1234"); // default password
   const [loggedIn, setLoggedIn] = useState(false);
-
+  
+  
+  
   const handleLogin = () => {
     if (password === savedPassword) {
       setLoggedIn(true);
+      navigate("/home")
     } else {
       alert("Invalid Password");
     }
@@ -35,11 +40,11 @@ function Login() {
     setPassword("");
   };
 
-  if (loggedIn) {
-    return (
-    <App/>
-    );
-  }
+  // if (loggedIn) {
+  //   return (
+  //   <App/>
+  //   );
+  // }
 
   return (
     <main className="login-container">

@@ -6,12 +6,12 @@ function Navbar(){
             <h2>finly.</h2>
 
             <div>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
                 <Link to="/transactions">Transactions</Link>
                 <Link to="/budget">Budget</Link>
                 <Link to="/analytics">Analytics</Link>
-                <Link to="/V1">V1</Link>
-                <Link to="/V2">V2</Link>
+                {/* <Link to="/V1">V1</Link> */}
+                {/* <Link to="/V2">V2</Link> */}
             </div>
 
         </nav>
