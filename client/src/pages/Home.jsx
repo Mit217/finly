@@ -1,4 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import {useEffect} from "react";
 import "../styles/home.css";
 
 function Home({ transactions }) {
@@ -38,10 +39,30 @@ function Home({ transactions }) {
       .reduce((sum, t) => sum + t.amount, 0),
   })).filter((cat) => cat.amount > 0);
 
+  // useEffect(() => {
+  function testPost(){  
+    fetch("http://localhost:5000/transactions",{
+       method:"POST",
+       headers:{
+        "Content-Type":"application/json"
+       },
+
+       body: JSON.stringify({
+        "id": 2,
+        "amount": 900,
+        "category": "Transport"
+       })
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+// , []);
+
+
   return (
     <div className="home">
       <h2>Dashboard</h2>
-
+    <button onClick={testPost}>Test POST</button>
       <div className="summary-cards">
         <div className="summary-card" style={{ borderColor: "#0d9488" }}>Income: ₹{totalIncome}</div>
         <div className="summary-card" style={{ borderColor: "#e11d48" }}>Expenses: ₹{totalExpense}</div>
