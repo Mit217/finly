@@ -5,11 +5,11 @@ import "../styles/home.css";
 function Home({ transactions }) {
 
   const totalIncome = transactions
-    .filter((t) => t.type === "income")
+    .filter((t) => t && t.type === "income")
     .reduce((sum, t) => sum + t.amount, 0);
 
   const totalExpense = transactions
-    .filter((t) => t.type === "expense")
+    .filter((t) => t &&t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
 
   const balance = totalIncome - totalExpense;
@@ -17,11 +17,11 @@ function Home({ transactions }) {
   const currentMonth = new Date().toISOString().slice(0, 7);
 
   const monthlyIncome = transactions
-    .filter((t) => t.type === "income" && t.date.startsWith(currentMonth))
+    .filter((t) => t &&t.type === "income" && t.date.startsWith(currentMonth))
     .reduce((sum, t) => sum + t.amount, 0);
 
   const monthlyExpense = transactions
-    .filter((t) => t.type === "expense" && t.date.startsWith(currentMonth))
+    .filter((t) => t &&t.type === "expense" && t.date.startsWith(currentMonth))
     .reduce((sum, t) => sum + t.amount, 0);
 
   const chartData = [
@@ -35,7 +35,7 @@ function Home({ transactions }) {
   const categoryData = CATEGORIES.map((cat) => ({
     name: cat,
     amount: transactions
-      .filter((t) => t.type === "expense" && t.category === cat)
+      .filter((t) => t && t.type === "expense" && t.category === cat)
       .reduce((sum, t) => sum + t.amount, 0),
   })).filter((cat) => cat.amount > 0);
 

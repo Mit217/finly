@@ -1,5 +1,5 @@
 import "../styles/budget.css";
-import "../hooks/useLocalStorage";
+import useLocalStorage from "../hooks/useLocalStorage";
 // import { useState, useEffect } from "react";
 
 
