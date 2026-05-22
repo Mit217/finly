@@ -25,9 +25,18 @@ function Transactions({transactions, setTransactions}){
             }
         });
 
-    function handleDelete(id) {
-        setTransactions(transactions.filter((t) => t.id !== id));
-    }
+    async function handleDelete(id) {
+        await fetch(
+            `http://localhost:5000/transactions/${id}`,
+            {
+                method: "DELETE"
+            }
+        );
+
+        setTransactions((prev) =>
+            prev.filter((t) => t.id !== id)
+        );
+}
     
     function formatDate(dateStr){
         if (!dateStr)

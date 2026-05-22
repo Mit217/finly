@@ -34,6 +34,20 @@ app.post("/transactions", (req, res) => {
 
 });
 
+app.delete("/transactions/:id", (req, res) => {
+
+    const id = Number(req.params.id);
+
+    transactions = transactions.filter(
+        (t) => t.id !== id
+    );
+
+    res.json({
+        message: "Transaction deleted"
+    });
+
+});
+
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
