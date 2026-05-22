@@ -2,39 +2,18 @@ const express = require("express");
 
 const router = express.Router();
 
-let transactions =
-    require("../data/transactions");
+const {
+    getTransactions,
+    addTransaction,
+    deleteTransaction
+} = require(
+    "../controllers/transactionsController"
+);
 
-router.get("/", (req, res) => {
+router.get("/", getTransactions);
 
-    res.json(transactions);
+router.post("/", addTransaction);
 
-});
-
-router.post("/", (req, res) => {
-
-    const newTransaction = req.body;
-
-    transactions.push(newTransaction);
-
-    res.json({
-        message: "Transaction added"
-    });
-
-});
-
-router.delete("/:id", (req, res) => {
-
-    const id = Number(req.params.id);
-
-    transactions = transactions.filter(
-        (t) => t.id !== id
-    );
-
-    res.json({
-        message: "Transaction deleted"
-    });
-
-});
+router.delete("/:id", deleteTransaction);
 
 module.exports = router;
