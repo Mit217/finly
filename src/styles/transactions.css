@@ -1,0 +1,91 @@
+
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+}
+
+.filters select, .filters input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #888;
+}
+
+.transactions {
+  padding: 40px;
+}
+
+.transactions h2 {
+  font-size: 28px;
+  margin: 0 0 24px 0;
+}
+
+.t-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.t-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.t-desc {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.t-meta {
+  font-size: 12px;
+  color: #888;
+  margin: 4px 0 0 0;
+}
+
+.t-amount {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.green { color: #0d9488; }
+.red   { color: #e11d48; }
+
+.empty {
+  color: #888;
+  font-size: 14px;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #e11d48;
+}

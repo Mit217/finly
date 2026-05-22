@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../styles/transactions.css";
+
 function Transactions({transactions, setTransactions}){
      
     const [filterCategory, setFiltercategory] = useState("All");

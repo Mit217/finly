@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import "../styles/budget.css";
+import "../hooks/useLocalStorage";
+// import { useState, useEffect } from "react";
+
 
 const CATEGORIES = ["Food", "Transport", "Rent", "Healthcare", "Entertainment", "Utilities","Others"];
 
 function Budget({ transactions }) {
-  const [limits, setLimits] = useState(() => {
-    const saved = localStorage.getItem("limits");
-    return saved? JSON.parse(saved) : {
+
+  const [limits, setLimits] = useLocalStorage("limits", {
       Food: 0, Transport: 0, Rent: 0, Healthcare: 0, Entertainment: 0, Utilities: 0, Others : 0 ,
-    }
-  });
+    });
+  
 
   function handleLimit(category, value) {
     setLimits({ ...limits, [category]: parseFloat(value) || 0 });
@@ -20,9 +22,6 @@ function Budget({ transactions }) {
       .reduce((sum, t) => sum + t.amount, 0);
   }
 
-  useEffect (() => {
-    localStorage.setItem("limits", JSON.stringify(limits));
-  }, [limits]);
   return (
     <div className="budget">
       <h2>Budget</h2>

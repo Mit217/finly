@@ -1,0 +1,12 @@
+
+.analytics {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.analytics h2 {
+  font-size: 28px;
+  margin: 0;
+}
